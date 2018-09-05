@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    max-width: 576px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+
+}
+
+
+header {
+    max-width: 100%;
+    background-color: #25C3D3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 150px;
+}
+
+
+.dropbtn {
+    background-color: #25C3D3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn i {
+	width: 100%;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #23B6CB;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #25C3D3;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transform: translate(-71.5%);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #23B6CB;}
+
+.show {display: block;}
+
+.login {
+    float: left;
+}
+
+.login li {
+    float: left;
+}
+
+.cat-populares {
+    overflow: hidden;
+    width: 100%;
+    background-color: #23B6CB;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+
+}
+
+.card {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 2%;
+    border-radius: 20px;
+}
+
+
+.card-image {
+    width: 100%;
+}
+
+.card-image a {
+    width: 100%;
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card-data {
+    width: 100%;
+}
+
+.card-data a {
+    color: white;
+    text-transform: uppercase;
+}
+
+.card-data h3 {
+    text-align: center;
+    border-radius: 20px;
+}
+
+.ofertas-semanales h2 {
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+}
+
+.slider-img {
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.botones-del-medio {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+
+.mySlides2 {
+    max-height: 200px;
+}
+
+.slider2 {
+    position: relative;
+    border: solid;
+    border-color: #23B6CB;
+    border-width: 5px;
+}
+
+.slider2-img {
+    position: relative;
+}
+
+.slider2 img {
+    width: 100%;
+}

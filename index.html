@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<header>
+		<a href="index.html"><img class="logo" src="img/logo-demo.png"></a>
+		<form class="buscador">
+			<input type="text" name="buscador">
+			<button type="submit"><i class="fas fa-search"></i></button>
+		</form>
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn" id="drops"><i onclick="myFunction()" class="fas fa-bars" id="drops"></i></button>
+			  <div id="myDropdown" class="dropdown-content">
+			  	<li><a href="index.html">Home</a></li>
+			    <li><a href="categorias.html">Categorias</a></li>
+				<li><a href="vender.html">Vender</a></li>
+				<li><a href="compras.html">Tus Compras</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<ul class="login">
+					<li><a href="login.html">Login</a></li>
+					<li><a href="registro.html">Registro</a></li>
+				</ul>
+			  </div>
+			</div>
+	</header>
+	<div class="slider">
+		<div class="slider-img">
+	    	<img class="mySlides" src="img/img1-prueba.jpg">
+	    	<img class="mySlides" src="img/img2-prueba.jpg">
+	    	<img class="mySlides" src="img/img3-prueba.jpg">
+	    	<img class="mySlides" src="img/img4-prueba.jpg">
+    	</div>
+		<div class="botones-del-medio">
+			<div class="left" onclick="plusDivs(-1)"><i class="fas fa-arrow-left"></i></div>
+			    <i class="far fa-circle fa-xs" onclick="currentDiv(1)"></i>
+			    <i class="far fa-circle fa-xs" onclick="currentDiv(2)"></i>
+			    <i class="far fa-circle fa-xs" onclick="currentDiv(3)"></i>
+			    <i class="far fa-circle fa-xs" onclick="currentDiv(4)"></i>
+			  	<div class="right" onclick="plusDivs(1)"><i class="fas fa-arrow-right"></i></div>
+			</div>
+		</div>
+	</div>	
+	<h2>Categorias Populares</h2>
+	<div class="cat-populares">
+		<div class="card">
+			<div class="card-image">
+				<a href="autos.html"><img src="img/autos.jpg"></a>
+			</div>
+			<div class="card-data">
+				<h3><a href="autos.html">Autos</a></h3>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image">
+				<a href="propiedades.html"><img src="img/propiedades.jpg"></a>
+			</div>
+			<div class="card-data">
+				<h3><a href="propiedades.html">Inmuebles</a></h3>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image">
+				<a href="electronica.html"><img src="img/electronica.jpg"></a>
+			</div>
+			<div class="card-data">
+				<h3><a href="electronica.html">Electronica</a></h3>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image">
+				<a href="telefonos.html"><img src="img/telefonos.jpg"></a>
+			</div>
+			<div class="card-data">
+				<h3><a href="telefonos.html">Telefonos - Tablets</a></h3>
+			</div>
+		</div>
+	</div>
+	<h2>ofertas semanales</h2>
+	<div class="ofertas-semanales">
+		<div class="slider2">
+			<div class="slider2-img">
+		    	<img class="mySlides2" src="img/img-phone-01.jpg">
+		    	<img class="mySlides2" src="img/img-phone-02.jpg">
+		    	<img class="mySlides2" src="img/img-phone-03.jpg">
+    		</div>
+		</div>
+	</div>
+	<h2>tiendas oficiales</h2>
+	<div class="tiendas-oficiales">
+		<div class="to-img">
+			<a href="#"><img src="img/adidas.png"></a>
+			<a href="#"><img src="img/canon.jpg"></a>
+			<a href="#"><img src="img/yamaha.png"></a>
+		</div>
+	</div>
+
+<script>
+	function myFunction() {
+	    document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	window.onclick = function(event) {
+	  if (!event.target.matches('#drops')) {
+
+	    var dropdowns = document.getElementsByClassName("dropdown-content");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
+	}
+</script>
+<script type="text/javascript">
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	     x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	     dots[i].className = dots[i].className.replace("botones-del-medio", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += "botones-del-medio";
+
+	}
+</script>
+<script type="text/javascript">
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+	    var i;
+	    var x = document.getElementsByClassName("mySlides");
+	    for (i = 0; i < x.length; i++) {
+	       x[i].style.display = "none";  
+	    }
+	    myIndex++;
+	    if (myIndex > x.length) {myIndex = 1}    
+	    x[myIndex-1].style.display = "block";  
+	    setTimeout(carousel, 4000);
+	}
+</script>
+<script type="text/javascript">
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+	    var i;
+	    var x = document.getElementsByClassName("mySlides2");
+	    for (i = 0; i < x.length; i++) {
+	       x[i].style.display = "none";  
+	    }
+	    myIndex++;
+	    if (myIndex > x.length) {myIndex = 1}    
+	    x[myIndex-1].style.display = "block";  
+	    setTimeout(carousel, 4000);
+	}
+</script>
+</body>
+</html>

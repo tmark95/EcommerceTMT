@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrar Usuarios</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img class="logo" src="img/logo-demo.png"></a>
+    <form class="buscador">
+      <input type="text" name="buscador">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn" id="drops"><i onclick="myFunction()" class="fas fa-bars" id="drops"></i></button>
+        <div id="myDropdown" class="dropdown-content">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categorias.html">Categorias</a></li>
+          <li><a href="vender.html">Vender</a></li>
+          <li><a href="compras.html">Tus Compras</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <ul class="login">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="registro.html">Registro</a></li>
+          </ul>
+        </div>
+      </div>
+  </header>
+
+  <h1>Registrate en nuestro sitio</h1>
+
+  <form action="registro.php" method="post"> 
+   <hr />
+   <h3>Crea una cuenta</h3>
+   <label for="nombre">Email:</label><br>
+   <input type="email" name="username" required>
+   <br/><br/>
+   <label for="pass">Password:</label><br>
+   <input type="password" name="password" minlength="8" kmaxlength="15" required>
+   <br/><br/>
+   <input type="submit" name="submit" value="Registrarme">
+  </form>
+   <hr /><br />
+
+  <script>
+  function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('#drops')) {
+
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+ </body>
+</html>

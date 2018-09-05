@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Login</title>
+ 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<header>
+		<a href="index.html"><img class="logo" src="img/logo-demo.png"></a>
+		<form class="buscador">
+			<input type="text" name="buscador">
+			<button type="submit"><i class="fas fa-search"></i></button>
+		</form>
+		<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn" id="drops"><i onclick="myFunction()" class="fas fa-bars" id="drops"></i></button>
+			  <div id="myDropdown" class="dropdown-content">
+			  	<li><a href="index.html">Home</a></li>
+			    <li><a href="categorias.html">Categorias</a></li>
+				<li><a href="vender.html">Vender</a></li>
+				<li><a href="compras.html">Tus Compras</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<ul class="login">
+					<li><a href="login.html">Login</a></li>
+					<li><a href="registro.html">Registro</a></li>
+				</ul>
+			  </div>
+			</div>
+	</header>
+	<h1>Login de Usuarios</h1>
+	<hr />
+
+	<form action="checklogin.php" method="post" >
+
+	<label>Nombre Usuario:</label><br>
+	<input name="username" type="text" id="username" required>
+	<br><br>
+
+	<label>Password:</label><br>
+	<input name="password" type="password" id="password" required>
+	<br><br>
+
+	<input type="submit" name="Submit" value="LOGIN">
+
+	</form>
+	<hr />
+
+ </body>
+</html>
